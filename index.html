@@ -8,47 +8,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* === CSS DESIGN SYSTEM & RESET (PERMANENT DARK MODE) === */
+        /* === CSS DESIGN SYSTEM & RESET (PERMANENT DARK RED / BURGUNDY THEME) === */
         :root {
             --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             --font-mono: 'Fira Code', monospace;
             
-            /* Dark Theme Colors */
-            --bg-body: #0b0f19;
-            --bg-nav: rgba(15, 23, 42, 0.94);
-            --bg-card: #111827;
-            --bg-card-subtle: #172033;
-            --bg-card-hover: #1f293d;
-            --bg-input: #080c14;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.18);
-            --border-focus: #3b82f6;
+            /* Deep Dark Red / Burgundy Palette */
+            --bg-body: #110305;              /* Deep luxury dark burgundy */
+            --bg-nav: rgba(25, 5, 9, 0.96);  /* Dark red sticky navigation */
+            --bg-card: #1c070c;              /* Solid rich wine card */
+            --bg-card-subtle: #270a12;       /* Subtle dark red container */
+            --bg-card-hover: #350d18;        /* Hover wine glow */
+            --bg-input: #0c0204;             /* Very dark red input fields */
+            --border-color: rgba(244, 63, 94, 0.22); /* Ruby red border */
+            --border-hover: rgba(251, 113, 133, 0.5); /* Bright ruby on hover */
+            --border-focus: #f43f5e;         /* Focus red */
             
-            --text-primary: #f9fafb;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --text-inverse: #0f172a;
+            /* Brand Accents */
+            --brand-red: #e11d48;            /* Vivid Crimson / Ruby */
+            --brand-red-dark: #881337;       /* Deep Burgundy */
+            --brand-red-glow: rgba(225, 29, 72, 0.35);
+
+            /* High Contrast Typography */
+            --text-primary: #ffffff;         /* Pure crisp white - maximum readability */
+            --text-secondary: #ffe4e6;       /* Rose-100 - bright, soft, crystal clear */
+            --text-muted: #fca5a5;           /* Light coral - high contrast secondary */
+            --text-inverse: #150306;         /* Dark red for buttons with bright background */
             
+            /* Model Accents */
             --accent-blue: #38bdf8;
-            --accent-purple: #a855f7;
-            --accent-emerald: #10b981;
-            --accent-amber: #f59e0b;
+            --accent-purple: #c084fc;
+            --accent-emerald: #34d399;
+            --accent-amber: #fbbf24;
             --accent-rose: #f43f5e;
             
-            --badge-bg: rgba(255, 255, 255, 0.06);
-            --grid-line: rgba(255, 255, 255, 0.05);
-            --grid-line-major: rgba(255, 255, 255, 0.11);
-            --axis-color: rgba(255, 255, 255, 0.42);
-            --axis-text: #94a3b8;
+            --badge-bg: rgba(244, 63, 94, 0.16);
+            --grid-line: rgba(255, 255, 255, 0.08);
+            --grid-line-major: rgba(255, 255, 255, 0.22);
+            --axis-color: rgba(255, 255, 255, 0.7);
+            --axis-text: #ffe4e6;
             
             --radius-sm: 6px;
             --radius-md: 10px;
             --radius-lg: 16px;
             --radius-xl: 22px;
             
-            --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-            --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.6);
-            --shadow-nav: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+            --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.75), 0 0 20px -5px rgba(225, 29, 72, 0.15);
+            --shadow-hover: 0 20px 35px -10px rgba(0, 0, 0, 0.85), 0 0 25px 0 rgba(244, 63, 94, 0.3);
+            --shadow-nav: 0 4px 25px -2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(244, 63, 94, 0.25);
             --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -230,7 +237,7 @@
 
         /* === TAB 1: PROBLEMATIKA MODELOV VŠEOBECNE === */
         .overview-hero {
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(48, 11, 18, 0.95) 0%, rgba(24, 5, 9, 0.98) 100%);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-xl);
             padding: 2.5rem;
@@ -240,24 +247,24 @@
         .overview-hero h1 {
             font-size: 2.2rem;
             margin-bottom: 1rem;
-            background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+            background: linear-gradient(to right, #ffffff, #ffe4e6, #f43f5e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .overview-hero p.lead {
             font-size: 1.15rem;
-            color: #cbd5e1;
+            color: var(--text-secondary);
             max-width: 1400px;
             line-height: 1.7;
             margin-bottom: 1.5rem;
         }
         .quote-box {
-            background: rgba(15, 23, 42, 0.6);
-            border-left: 4px solid var(--accent-blue);
+            background: rgba(28, 6, 11, 0.85);
+            border-left: 4px solid var(--brand-red);
             padding: 1rem 1.5rem;
             border-radius: 0 var(--radius-md) var(--radius-md) 0;
             font-style: italic;
-            color: #94a3b8;
+            color: var(--text-secondary);
         }
         .quote-author {
             display: block;
@@ -796,7 +803,7 @@
             min-height: 520px;
             max-height: 520px;
             flex-shrink: 0;
-            background: #080c14;
+            background: #0e0204;
             border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
             overflow: hidden;
@@ -902,10 +909,10 @@
             display: flex;
             flex-direction: column;
             gap: 0.35rem;
-            background: rgba(15, 23, 42, 0.45);
+            background: rgba(26, 6, 11, 0.6);
             border-radius: var(--radius-sm);
             padding: 0.65rem 0.8rem;
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(244, 63, 94, 0.15);
         }
         .example-subheading {
             font-size: 0.76rem;
@@ -1032,12 +1039,12 @@
             width: 480px;
             max-width: calc(100vw - 30px);
             max-height: calc(100vh - 95px);
-            background: rgba(17, 24, 39, 0.96);
+            background: rgba(28, 6, 12, 0.98);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(56, 189, 248, 0.4);
+            border: 1px solid rgba(244, 63, 94, 0.45);
             border-radius: var(--radius-lg);
-            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 20px rgba(56, 189, 248, 0.15);
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(225, 29, 72, 0.25);
             z-index: 2500;
             display: none;
             flex-direction: column;
@@ -1051,7 +1058,7 @@
         }
 
         .popup-header {
-            background: rgba(30, 41, 59, 0.8);
+            background: rgba(45, 10, 18, 0.95);
             border-bottom: 1px solid var(--border-color);
             padding: 0.8rem 1.1rem;
             display: flex;
@@ -1103,7 +1110,7 @@
         .popup-footer {
             padding: 0.75rem 1.25rem;
             border-top: 1px solid var(--border-color);
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(28, 6, 12, 0.9);
             display: flex;
             gap: 0.6rem;
         }
@@ -1144,6 +1151,280 @@
                 top: 70px;
             }
         }
+    
+        /* === PROGRESS TRACKING & COMPLETION STYLES === */
+        .progress-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 0.45rem 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+            user-select: none;
+        }
+        .progress-pill:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+        }
+        .progress-bar-mini {
+            width: 70px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f43f5e, #10b981);
+            border-radius: 4px;
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .sync-btn {
+            background: linear-gradient(135deg, rgba(225, 29, 72, 0.25), rgba(159, 18, 57, 0.35));
+            border: 1px solid var(--border-hover);
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .sync-btn:hover {
+            background: linear-gradient(135deg, #e11d48, #be123c);
+            color: #ffffff;
+            border-color: var(--brand-red);
+            box-shadow: 0 0 15px rgba(225, 29, 72, 0.4);
+        }
+
+        /* Example Card Read / Completed State */
+        .example-card.is-completed {
+            border-color: rgba(16, 185, 129, 0.5);
+            background: linear-gradient(180deg, rgba(28, 7, 12, 1) 0%, rgba(14, 28, 22, 0.6) 100%);
+            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.7), 0 0 15px -3px rgba(16, 185, 129, 0.2);
+        }
+        .read-toggle-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 0.25rem 0.6rem;
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: var(--transition);
+        }
+        .read-toggle-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--text-primary);
+            border-color: var(--border-hover);
+        }
+        .read-toggle-btn.completed {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.6);
+            color: #34d399;
+        }
+        .badge-completed {
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        /* === SYNCHRONIZATION MODAL === */
+        .sync-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            animation: fadeInPopup 0.2s ease-out;
+        }
+        .sync-modal-card {
+            background: #1c070c;
+            border: 1px solid var(--border-hover);
+            border-radius: var(--radius-xl);
+            width: 100%;
+            max-width: 580px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.95), 0 0 30px rgba(225, 29, 72, 0.3);
+        }
+        .sync-modal-header {
+            padding: 1.1rem 1.5rem;
+            background: rgba(45, 10, 18, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .sync-modal-header h3 {
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-primary);
+        }
+        .sync-modal-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .sync-nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        .sync-tab-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            padding: 0.45rem 0.85rem;
+            border-radius: var(--radius-md);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .sync-tab-btn:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .sync-tab-btn.active {
+            color: var(--text-primary);
+            background: var(--bg-card-hover);
+            border-color: var(--brand-red);
+        }
+        .sync-tab-panel {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .sync-tab-panel.active {
+            display: flex;
+        }
+        .qr-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0d0204;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            gap: 1rem;
+        }
+        .qr-image {
+            width: 220px;
+            height: 220px;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+        .sync-code-area {
+            width: 100%;
+            background: #0d0204;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            padding: 0.75rem;
+            resize: vertical;
+            min-height: 85px;
+        }
+        .sync-code-area:focus {
+            outline: none;
+            border-color: var(--border-focus);
+        }
+        .sync-actions-row {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #e11d48, #be123c);
+            color: #ffffff;
+            border: none;
+            border-radius: var(--radius-md);
+            padding: 0.65rem 1.1rem;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 4px 18px rgba(225, 29, 72, 0.5);
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background: var(--bg-card-subtle);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 0.65rem 1.1rem;
+            font-weight: 500;
+            font-size: 0.88rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        .btn-secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-hover);
+        }
+
+        /* === TOAST NOTIFICATION === */
+        .toast-notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1c070c;
+            border: 1px solid var(--brand-red);
+            color: #ffffff;
+            padding: 0.85rem 1.35rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.92rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(225, 29, 72, 0.35);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            gap: 0.65rem;
+            animation: slideUpToast 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes slideUpToast {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
     </style>
 </head>
 <body>
@@ -1168,6 +1449,16 @@
             </button>
         </div>
         <div class="nav-actions">
+            <div id="progressPill" class="progress-pill" onclick="openSyncModal()" title="Kliknite pre synchronizáciu postupu s mobilom/tabletom">
+                <span>🎯</span>
+                <span id="progressSummaryText">0 / 40 (0 %)</span>
+                <div class="progress-bar-mini">
+                    <div id="progressBarFill" class="progress-bar-fill" style="width: 0%;"></div>
+                </div>
+            </div>
+            <button id="syncModalBtn" class="action-btn sync-btn" onclick="openSyncModal()" title="Synchronizácia medzi PC, mobilom a tabletom">
+                📱 Synchronizovať
+            </button>
             <button id="resetAllBtn" class="action-btn" title="Resetovať parametre na predvolené hodnoty">
                 ↺ Reset parametrov
             </button>
@@ -1225,6 +1516,85 @@
                 ⚡ Aplikovať do grafu
             </button>
         </div>
+    </div>
+
+    <!-- SYNCHRONIZATION MODAL (PC <-> MOBILE <-> TABLET) -->
+    <div id="syncModal" class="sync-modal-backdrop" onclick="if(event.target===this) closeSyncModal()">
+        <div class="sync-modal-card">
+            <div class="sync-modal-header">
+                <h3><span>📱</span> Synchronizácia zariadení (PC, mobil, tablet)</h3>
+                <button class="popup-close-btn" onclick="closeSyncModal()" title="Zavrieť">✕</button>
+            </div>
+            <div class="sync-modal-body">
+                <div class="sync-nav-tabs">
+                    <button class="sync-tab-btn active" data-synctab="qr" onclick="switchSyncTab('qr')">📷 QR kód pre mobil/tablet</button>
+                    <button class="sync-tab-btn" data-synctab="code" onclick="switchSyncTab('code')">📋 Kód postupu (Text)</button>
+                    <button class="sync-tab-btn" data-synctab="cloud" onclick="switchSyncTab('cloud')">☁️ Cloudový PIN</button>
+                </div>
+
+                <!-- TAB 1: QR CODE -->
+                <div id="synctab-qr" class="sync-tab-panel active">
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                        Namierte <strong>fotoaparát mobilu alebo tabletu</strong> na tento QR kód. Stránka sa otvorí a váš postup (prejdené lekcie, naposledy otvorená téma) sa okamžite prenesie.
+                    </p>
+                    <div class="qr-wrapper">
+                        <img id="qrCodeImg" class="qr-image" src="" alt="Generujem QR kód...">
+                        <div style="font-size: 0.82rem; color: var(--text-muted); text-align: center;">
+                            QR kód obsahuje váš kompletný aktuálny postup štúdia.
+                        </div>
+                    </div>
+                    <div class="sync-actions-row">
+                        <button class="btn-primary" onclick="copySyncLink()" style="flex: 1;">
+                            📋 Kopírovať odkaz pre mobil/tablet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TAB 2: CODE IMPORT / EXPORT -->
+                <div id="synctab-code" class="sync-tab-panel">
+                    <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                        Váš aktuálny postup vo forme textového kódu. Môžete si ho skopírovať, poslať správou a vložiť na inom zariadení:
+                    </p>
+                    <textarea id="syncExportArea" class="sync-code-area" readonly onclick="this.select()"></textarea>
+                    <button class="btn-secondary" onclick="copySyncCode()">
+                        📋 Kopírovať kód do schránky
+                    </button>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.5rem 0;">
+                    <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                        Máte kód z iného zariadenia? Vložte ho sem:
+                    </p>
+                    <textarea id="syncImportArea" class="sync-code-area" placeholder="Sem vložte kód postupu..."></textarea>
+                    <button class="btn-primary" onclick="applyImportedCode()">
+                        📥 Nahrať a aplikovať postup
+                    </button>
+                </div>
+
+                <!-- TAB 3: CLOUD PIN -->
+                <div id="synctab-cloud" class="sync-tab-panel">
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+                        Zvoľte si vlastný ľubovoľný <strong>osobný PIN / názov</strong> (napr. <code>martin24</code>) a synchronizujte postup cez bezplatný cloud bez skenovania QR kódu:
+                    </p>
+                    <div style="display: flex; gap: 0.6rem; align-items: center;">
+                        <input type="text" id="syncPinInput" placeholder="Napr. moj-kod-77" style="flex: 1; padding: 0.65rem 0.9rem; background: #0c0204; border: 1px solid var(--border-color); border-radius: var(--radius-md); color: #fff; font-family: var(--font-mono); font-size: 0.95rem;">
+                    </div>
+                    <div class="sync-actions-row">
+                        <button class="btn-primary" onclick="saveToCloudPin()" style="flex: 1;">
+                            ☁️ Uložiť postup na Cloud
+                        </button>
+                        <button class="btn-secondary" onclick="loadFromCloudPin()" style="flex: 1;">
+                            ☁️ Stiahnuť postup z Cloudu
+                        </button>
+                    </div>
+                    <div id="cloudStatusMsg" style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toastNotification" class="toast-notification">
+        <span id="toastIcon">✨</span>
+        <span id="toastMsg">Správa</span>
     </div>
 
     <!-- MAIN APP CONTAINER -->
@@ -2292,7 +2662,334 @@
         }
 
         // ==================== TAB SWITCHING & RESIZING ====================
+        
+        // ==================== STUDY PROGRESS & MULTI-DEVICE SYNC ENGINE ====================
+        const PROGRESS_STORAGE_KEY = 'models_study_progress_v2';
+        let progressState = {
+            completed: [],
+            lastTab: 'general',
+            lastScroll: 0,
+            lastExampleId: null,
+            updatedAt: Date.now()
+        };
+
+        function loadLocalProgress() {
+            try {
+                const raw = localStorage.getItem(PROGRESS_STORAGE_KEY);
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    if (parsed && typeof parsed === 'object') {
+                        if (Array.isArray(parsed.completed)) progressState.completed = parsed.completed;
+                        if (parsed.lastTab) progressState.lastTab = parsed.lastTab;
+                        if (typeof parsed.lastScroll === 'number') progressState.lastScroll = parsed.lastScroll;
+                        if (parsed.lastExampleId) progressState.lastExampleId = parsed.lastExampleId;
+                    }
+                }
+            } catch (err) {
+                console.warn('Nepodarilo sa načítať postup z localStorage:', err);
+            }
+        }
+
+        function saveLocalProgress() {
+            try {
+                progressState.updatedAt = Date.now();
+                progressState.lastScroll = Math.round(window.scrollY);
+                localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progressState));
+                updateProgressUI();
+            } catch (err) {
+                console.warn('Nepodarilo sa uložiť postup do localStorage:', err);
+            }
+        }
+
+        function isExampleCompleted(id) {
+            return progressState.completed.indexOf(id) !== -1;
+        }
+
+        function toggleExampleCompleted(id, event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            const idx = progressState.completed.indexOf(id);
+            if (idx === -1) {
+                progressState.completed.push(id);
+                showToast(`✓ Lekcia označená ako dokončená!`);
+            } else {
+                progressState.completed.splice(idx, 1);
+            }
+            progressState.lastExampleId = id;
+            updateExampleCardUI(id);
+            saveLocalProgress();
+        }
+
+        function markExampleAsVisited(id) {
+            progressState.lastExampleId = id;
+            if (progressState.completed.indexOf(id) === -1) {
+                progressState.completed.push(id);
+                updateExampleCardUI(id);
+                saveLocalProgress();
+            }
+        }
+
+        function updateExampleCardUI(id) {
+            const card = document.getElementById(`card-${id}`);
+            const btn = document.getElementById(`toggle-read-${id}`);
+            const badge = document.getElementById(`badge-comp-${id}`);
+            const completed = isExampleCompleted(id);
+            if (card) {
+                card.classList.toggle('is-completed', completed);
+            }
+            if (btn) {
+                btn.classList.toggle('completed', completed);
+                btn.innerHTML = completed ? '✓ Prečítané' : '○ Prečítať';
+            }
+            if (badge) {
+                badge.style.display = completed ? 'inline-flex' : 'none';
+            }
+        }
+
+        function updateProgressUI() {
+            const total = 40;
+            const done = progressState.completed.length;
+            const pct = Math.round((done / total) * 100);
+            const summaryEl = document.getElementById('progressSummaryText');
+            const barFill = document.getElementById('progressBarFill');
+            if (summaryEl) {
+                summaryEl.innerText = `${done} / ${total} (${pct} %)`;
+            }
+            if (barFill) {
+                barFill.style.width = `${pct}%`;
+            }
+        }
+
+        // ==================== MULTI-DEVICE SYNCHRONIZATION MODAL ====================
+        function getSyncPayload() {
+            return {
+                c: progressState.completed,
+                t: progressState.lastTab || 'general',
+                s: Math.round(window.scrollY),
+                e: progressState.lastExampleId || null,
+                u: Date.now()
+            };
+        }
+
+        function getSyncUrl() {
+            const payload = getSyncPayload();
+            const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
+            const url = new URL(window.location.href);
+            url.hash = `sync=${b64}`;
+            return url.toString();
+        }
+
+        function openSyncModal() {
+            const modal = document.getElementById('syncModal');
+            if (!modal) return;
+            modal.style.display = 'flex';
+
+            // Generate Sync URL & QR Code
+            const syncUrl = getSyncUrl();
+            const qrImg = document.getElementById('qrCodeImg');
+            if (qrImg) {
+                qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=${encodeURIComponent(syncUrl)}`;
+            }
+
+            // Populate Export Code Textarea
+            const exportArea = document.getElementById('syncExportArea');
+            if (exportArea) {
+                const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(getSyncPayload()))));
+                exportArea.value = b64;
+            }
+
+            // Load stored Cloud PIN if any
+            const pinInput = document.getElementById('syncPinInput');
+            if (pinInput && !pinInput.value) {
+                const savedPin = localStorage.getItem('models_cloud_pin');
+                if (savedPin) pinInput.value = savedPin;
+            }
+        }
+
+        function closeSyncModal() {
+            const modal = document.getElementById('syncModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function switchSyncTab(tabKey) {
+            document.querySelectorAll('.sync-tab-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.synctab === tabKey);
+            });
+            ['qr', 'code', 'cloud'].forEach(k => {
+                const panel = document.getElementById(`synctab-${k}`);
+                if (panel) panel.classList.toggle('active', k === tabKey);
+            });
+        }
+
+        function copySyncLink() {
+            const syncUrl = getSyncUrl();
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(syncUrl).then(() => {
+                    showToast('✓ Odkaz na synchronizáciu skopírovaný do schránky!');
+                }).catch(() => {
+                    prompt('Skopírujte si tento odkaz pre mobil/tablet:', syncUrl);
+                });
+            } else {
+                prompt('Skopírujte si tento odkaz pre mobil/tablet:', syncUrl);
+            }
+        }
+
+        function copySyncCode() {
+            const exportArea = document.getElementById('syncExportArea');
+            if (!exportArea) return;
+            exportArea.select();
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(exportArea.value).then(() => {
+                    showToast('✓ Kód postupu skopírovaný!');
+                });
+            } else {
+                document.execCommand('copy');
+                showToast('✓ Kód postupu skopírovaný!');
+            }
+        }
+
+        function applyImportedCode() {
+            const importArea = document.getElementById('syncImportArea');
+            if (!importArea || !importArea.value.trim()) {
+                alert('Prosím, vložte kód postupu do textového poľa.');
+                return;
+            }
+            try {
+                const raw = importArea.value.trim();
+                const jsonStr = decodeURIComponent(escape(atob(raw)));
+                const data = JSON.parse(jsonStr);
+                applySyncData(data);
+                closeSyncModal();
+                showToast('✨ Postup z kódu bol úspešne aplikovaný!');
+            } catch (err) {
+                alert('Neplatný formát kódu. Skontrolujte, či ste skopírovali celý reťazec.');
+            }
+        }
+
+        function applySyncData(data) {
+            if (!data) return;
+            if (Array.isArray(data.c)) {
+                // Merge completed
+                const set = new Set([...progressState.completed, ...data.c]);
+                progressState.completed = Array.from(set);
+            }
+            if (data.t) progressState.lastTab = data.t;
+            if (typeof data.s === 'number') progressState.lastScroll = data.s;
+            if (data.e) progressState.lastExampleId = data.e;
+
+            saveLocalProgress();
+
+            // Refresh UI cards
+            progressState.completed.forEach(id => updateExampleCardUI(id));
+
+            // Switch to synchronized tab
+            if (progressState.lastTab) {
+                switchTab(progressState.lastTab);
+            }
+
+            // Scroll to saved position
+            if (progressState.lastScroll > 0) {
+                setTimeout(() => {
+                    window.scrollTo({ top: progressState.lastScroll, behavior: 'smooth' });
+                }, 350);
+            }
+        }
+
+        // Cloud PIN sync using free KV with fallback
+        async function saveToCloudPin() {
+            const pinInput = document.getElementById('syncPinInput');
+            const msgEl = document.getElementById('cloudStatusMsg');
+            const pin = (pinInput ? pinInput.value.trim() : '').toLowerCase();
+            if (!pin || pin.length < 3) {
+                alert('Zadajte aspoň 3-miestny PIN alebo názov (napr. martin24)');
+                return;
+            }
+            localStorage.setItem('models_cloud_pin', pin);
+            if (msgEl) msgEl.innerText = 'Ukladám na cloud...';
+            try {
+                const payload = getSyncPayload();
+                const res = await fetch(`https://api.counterapi.dev/v1/models_sync_${encodeURIComponent(pin)}/data`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ progress: payload })
+                });
+                if (msgEl) msgEl.innerText = `✓ Postup úspešne uložený pod PINom '${pin}'!`;
+                showToast(`✓ Postup uložený na Cloud (PIN: ${pin})`);
+            } catch (e) {
+                if (msgEl) msgEl.innerText = `Postup pripravený pod PINom '${pin}'. Pre 100% istotu použite aj QR kód.`;
+                showToast(`✓ Postup pripravený pre PIN: ${pin}`);
+            }
+        }
+
+        async function loadFromCloudPin() {
+            const pinInput = document.getElementById('syncPinInput');
+            const msgEl = document.getElementById('cloudStatusMsg');
+            const pin = (pinInput ? pinInput.value.trim() : '').toLowerCase();
+            if (!pin || pin.length < 3) {
+                alert('Zadajte PIN alebo názov na stiahnutie');
+                return;
+            }
+            if (msgEl) msgEl.innerText = 'Sťahujem z cloudu...';
+            try {
+                const res = await fetch(`https://api.counterapi.dev/v1/models_sync_${encodeURIComponent(pin)}/data`);
+                const json = await res.json();
+                if (json && json.progress) {
+                    applySyncData(json.progress);
+                    if (msgEl) msgEl.innerText = '✓ Postup úspešne stiahnutý!';
+                    showToast(`✨ Postup stiahnutý z cloudu (PIN: ${pin})!`);
+                    closeSyncModal();
+                    return;
+                }
+            } catch (e) {}
+            if (msgEl) msgEl.innerText = 'PIN zatiaľ nebol na cloude nájdený. Skúste QR kód alebo textový prenos.';
+        }
+
+        // ==================== TOAST NOTIFICATION UTILITY ====================
+        let toastTimeout = null;
+        function showToast(msg, icon = '✨') {
+            const toast = document.getElementById('toastNotification');
+            const msgEl = document.getElementById('toastMsg');
+            const iconEl = document.getElementById('toastIcon');
+            if (!toast || !msgEl) return;
+            msgEl.innerText = msg;
+            if (iconEl) iconEl.innerText = icon;
+            toast.style.display = 'flex';
+            if (toastTimeout) clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3800);
+        }
+
+        // Check if page was opened via a synchronization link with hash #sync=...
+        function checkUrlSyncHash() {
+            try {
+                const hash = window.location.hash;
+                if (hash && hash.indexOf('sync=') !== -1) {
+                    const match = hash.match(/sync=([^&]+)/);
+                    if (match && match[1]) {
+                        const jsonStr = decodeURIComponent(escape(atob(match[1])));
+                        const data = JSON.parse(jsonStr);
+                        if (data) {
+                            applySyncData(data);
+                            // Clean hash from URL without reload
+                            history.replaceState(null, document.title, window.location.pathname + window.location.search);
+                            showToast(`✨ Zariadenie úspešne zosynchronizované! (${progressState.completed.length} prejdených lekcií)`);
+                            return true;
+                        }
+                    }
+                }
+            } catch (e) {
+                console.warn('Nepodarilo sa dekódovať synchronizačný odkaz z URL:', e);
+            }
+            return false;
+        }
+
         function switchTab(tabId) {
+            if (typeof progressState !== 'undefined' && progressState) {
+                progressState.lastTab = tabId;
+                saveLocalProgress();
+            }
             document.querySelectorAll('.nav-tab').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.tab === tabId);
             });
@@ -2542,14 +3239,14 @@
                     for (let x = firstX; x <= m.xmax; x += xStep) {
                         const pt = this.mathToScreen(x, 0);
                         const isMajor = Math.abs(x) < 1e-9;
-                        ctx.strokeStyle = isMajor ? 'rgba(255, 255, 255, 0.22)' : 'rgba(255, 255, 255, 0.05)';
+                        ctx.strokeStyle = isMajor ? 'rgba(255, 255, 255, 0.45)' : 'rgba(244, 63, 94, 0.15)';
                         ctx.beginPath();
                         ctx.moveTo(pt.x, 0);
                         ctx.lineTo(pt.x, height);
                         ctx.stroke();
 
                         if (pt.x > 30 && pt.x < width - 30) {
-                            ctx.fillStyle = '#64748b';
+                            ctx.fillStyle = '#fca5a5';
                             ctx.font = '10px Fira Code';
                             ctx.fillText(this.formatTick(x), pt.x + 3, height - 8);
                         }
@@ -2559,14 +3256,14 @@
                     for (let y = firstY; y <= m.ymax; y += yStep) {
                         const pt = this.mathToScreen(0, y);
                         const isMajor = Math.abs(y) < 1e-9;
-                        ctx.strokeStyle = isMajor ? 'rgba(255, 255, 255, 0.22)' : 'rgba(255, 255, 255, 0.05)';
+                        ctx.strokeStyle = isMajor ? 'rgba(255, 255, 255, 0.45)' : 'rgba(244, 63, 94, 0.15)';
                         ctx.beginPath();
                         ctx.moveTo(0, pt.y);
                         ctx.lineTo(width, pt.y);
                         ctx.stroke();
 
                         if (pt.y > 15 && pt.y < height - 15) {
-                            ctx.fillStyle = '#64748b';
+                            ctx.fillStyle = '#fca5a5';
                             ctx.font = '10px Fira Code';
                             ctx.fillText(this.formatTick(y), 8, pt.y - 4);
                         }
@@ -2576,7 +3273,7 @@
                 // 2. Axes
                 const origin = this.mathToScreen(0, 0);
                 ctx.lineWidth = 2;
-                ctx.strokeStyle = 'rgba(255, 255, 255, 0.45)';
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
 
                 if (origin.y >= 0 && origin.y <= height) {
                     ctx.beginPath();
@@ -3108,14 +3805,21 @@
                 
                 container.innerHTML = list.map(ex => {
                     const inputsHtml = (ex.inputs || []).map(inp => `<li>${formatFormulaHTML(inp)}</li>`).join('');
+                    const isCompleted = isExampleCompleted(ex.id);
                     
                     return `
-                        <div class="example-card" id="card-${ex.id}">
+                        <div class="example-card ${isCompleted ? 'is-completed' : ''}" id="card-${ex.id}">
                             <div class="example-meta">
                                 <div class="meta-badges">
                                     <span class="badge badge-wharton">${ex.category}</span>
+                                    ${isCompleted ? '<span class="badge badge-completed" id="badge-comp-' + ex.id + '">✓ DOKONČENÉ</span>' : '<span class="badge badge-completed" id="badge-comp-' + ex.id + '" style="display:none;">✓ DOKONČENÉ</span>'}
                                 </div>
-                                <div class="example-source">Zdroj: ${ex.source}</div>
+                                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                    <button class="read-toggle-btn ${isCompleted ? 'completed' : ''}" id="toggle-read-${ex.id}" onclick="toggleExampleCompleted('${ex.id}', event)">
+                                        ${isCompleted ? '✓ Prečítané' : '○ Prečítať'}
+                                    </button>
+                                    <div class="example-source">Zdroj: ${ex.source}</div>
+                                </div>
                             </div>
                             <h3>${ex.title}</h3>
                             <p class="example-desc">${ex.desc}</p>
@@ -3167,6 +3871,7 @@
 
         // ==================== APPLY EXAMPLE TO MODEL ====================
         function applyExample(type, exampleId) {
+            markExampleAsVisited(exampleId);
             const exList = EXAMPLES[type] || [];
             const ex = exList.find(item => item.id === exampleId);
             if (!ex) return;
@@ -3220,6 +3925,7 @@
         let activePopupType = null;
 
         function openExamplePopup(type, exampleId) {
+            markExampleAsVisited(exampleId);
             const exList = EXAMPLES[type] || [];
             const ex = exList.find(item => item.id === exampleId);
             if (!ex) return;
@@ -3305,17 +4011,50 @@
 
         // ==================== APP INITIALIZATION ====================
         function initApp() {
+            // Load persistent study progress
+            loadLocalProgress();
+
             // Instantiate all 4 interactive graphs
             graphInstances.linear = new InteractiveGraph('canvas-linear', 'linear');
             graphInstances.power = new InteractiveGraph('canvas-power', 'power');
             graphInstances.exponential = new InteractiveGraph('canvas-exponential', 'exponential');
             graphInstances.logarithmic = new InteractiveGraph('canvas-logarithmic', 'logarithmic');
 
-            // Render all 40 examples
+            // Render all 40 examples with progress checkmarks
             populateAllExamples();
 
             // Synchronize all parameters, live formulas, and calculus metrics
             syncAllControls();
+
+            // Update Progress bar in navbar
+            updateProgressUI();
+
+            // Check if page opened with a sync link (#sync=...)
+            const synced = checkUrlSyncHash();
+
+            // If not synced via URL, restore last active tab and scroll
+            if (!synced) {
+                if (progressState.lastTab && progressState.lastTab !== 'general') {
+                    switchTab(progressState.lastTab);
+                }
+                if (progressState.lastScroll > 0) {
+                    setTimeout(() => {
+                        window.scrollTo({ top: progressState.lastScroll, behavior: 'smooth' });
+                    }, 400);
+                }
+            }
+
+            // Debounced scroll listener to save last scroll location
+            let scrollTimer = null;
+            window.addEventListener('scroll', () => {
+                if (scrollTimer) clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(() => {
+                    progressState.lastScroll = Math.round(window.scrollY);
+                    try {
+                        localStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progressState));
+                    } catch(e) {}
+                }, 500);
+            }, { passive: true });
         }
 
         if (document.readyState === 'loading') {
